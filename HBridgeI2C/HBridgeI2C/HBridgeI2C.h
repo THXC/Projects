@@ -17,6 +17,12 @@ class HBridgeI2C {
 
 public:
 
+	//constructor
+	HBridgeI2C();
+	HBridgeI2C(int hbi2c_Addr);
+
+	void init();
+
     // movement functions
     void motorAON();
 	void motorAOFF();

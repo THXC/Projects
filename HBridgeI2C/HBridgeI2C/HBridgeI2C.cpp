@@ -16,12 +16,12 @@
 #define mT1		B01000000						// pin 6
 #define mT2		B10000000						// pin 7
 
-HBridgeI2CI2C::HBridgeI2CI2C(int hbi2c_Addr)
+HBridgeI2C::HBridgeI2C(int hbi2c_Addr)
 {
 	_Addr = hbi2c_Addr;
 }
 
-HBridgeI2CI2C::init(){
+HBridgeI2C::init(){
 	Wire.begin();
 }
 
