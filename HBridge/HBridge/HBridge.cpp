@@ -19,13 +19,33 @@
 
 
 #include "HBridge.h"
+#include <Wire.h>
 
-/**
- * Constructor
- */
-HBridge::HBridge(int hb_num){
-	//no room for error :)
+// Compatibility with Arduino 1.0
+#if ARDUINO >= 100
+ #include "Arduino.h"
+#else
+ #include "WProgram.h"
+#endif
+
+// minihelper
+static inline void ws(uint8_t x) {
+#if ARDUINO >= 100
+  Wire.write((uint8_t)x);
+#else
+  Wire.send(x);
+#endif
 }
+
+static inline uint8_t wr(void) {
+#if ARDUINO >= 100
+  return Wire.read();
+#else
+  return Wire.receive();
+#endif
+}
+
+
 
 
 /**

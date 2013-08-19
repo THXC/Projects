@@ -22,21 +22,13 @@
 #ifndef HBridge_H
 #define HBridge_H
 
-// Compatibility for Arduino 1.0
-
-#if ARDUINO >= 100
-    #include "Arduino.h"
-#else    
-    #include "WProgram.h"
-#endif
-
 class HBridge {
 
 public:
 
     // constructor
     HBridge(); // empty constructor
-    HBridge(int hb_num); // constructor
+    //HBridge(int hb_num); // constructor
 
 	//void HBridge(int hb_num);
     void setEnablePins(byte el, byte e2);
@@ -95,7 +87,6 @@ public:
 
 private:
 
-    int hb_num;
 	int vala;
 	int valb;
 	int val;
