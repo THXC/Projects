@@ -77,6 +77,16 @@ build/
 *.pidb
 *.log
 *.scc
+*.filters
+*.user
+*.ipch
+*.vsarduino.h
+*.bmp
+*.exe
+*.vsmacros
+*.tiff
+*.png
+*.jpg
 
 # Visual C++ cache files
 ipch/
