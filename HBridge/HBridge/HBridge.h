@@ -2,7 +2,7 @@
 	u can download this lib from BETA version https://github.com/THXC/Projects/tree/master/HBridge/HBridge
 	or latest from https://github.com/THXC/Arduino/tree/master/libraries/HBridge
 	and most of the credit goes to MR. Sudar Muthu for delivring a simple lib that u can find on 
-	his web page at http://hardwarefun.com/projects/dc-motor-bot i have simply rewrite this 
+	his web page at http://hardwarefun.com/projects/dc-move-bot i have simply rewrite this 
 	to match my requirements :)
 	Sincerely T.H.X. and have fun using this lib
 */
@@ -22,17 +22,27 @@
 #ifndef HBridge_H
 #define HBridge_H
 
+// Compatibility for Arduino 1.0
+
+#if ARDUINO >= 100
+    #include "Arduino.h"
+#else    
+    #include "WProgram.h"
+#endif
+
 class HBridge {
 
 public:
 
     // constructor
     HBridge(); // empty constructor
-    //HBridge(int hb_num); // constructor
+    HBridge(int hb_num); // constructor
 
 	//void HBridge(int hb_num);
     void setEnablePins(byte el, byte e2);
     void setControlPins(byte I1, byte I2, byte I3, byte I4);
+	
+	/***************************************************************************************************/
   
     // movement functions
     void motorAON();
@@ -41,34 +51,64 @@ public:
 	void motorBOFF();
 	void motorON();
 	void motorOFF();
+	
+	/***************************************************************************************************/
 
 	//coast
 	void motorACoast();
 	void motorBCoast();
+	
+	/***************************************************************************************************/
 
 	//move
-	void motorAForward();
-	void motorBForward();
-	void motorForward();
-	void motorABackward();
-	void motorBBackward();
-	void motorBackward();
+	void moveAForward();
+	void moveBForward();
+	void moveForward();
+	void moveABackward();
+	void moveBBackward();
+	void moveBackward();
+	
+	/***************************************************************************************************/
+	
+	void moveAUP();
+	void moveADown();
+	void moveBUP();
+	void moveBDown();
+	void moveUP();
+	void moveDown();
+	
+	/***************************************************************************************************/
+	
+	void ACatch();
+	void ADrop();
+	void BDrop();
+	void BCatch();
+	void ABCatch();
+	void ABDrop();
+	
+	/***************************************************************************************************/
 
 	//move A left and B right /-/ A right and B left
 	void turnALeft();
 	void turnBLeft();
 	void turnARight();
 	void turnBRight();
+	
+	/***************************************************************************************************/
 
 	//move AB left or right
-	void Left();
-	void Right();
-	void Stop();
-
+	void moveLeft();
+	void moveRight();
+	void motorStop();
+	
+	/***************************************************************************************************/
+	
 	//PWM
 	void PWMA(int vala);
 	void PWMB(int valb);
 	void PWM(int val);
+	
+	/***************************************************************************************************/
 
 	void movePWMAForward();
 	void movePWMBForward();
@@ -76,20 +116,27 @@ public:
 	void movePWMBBackward();
 	void movePWMForward();
 	void movePWMBackward();
+	
+	/***************************************************************************************************/
 
 	void movePWMALeft();
 	void movePWMARight();
 	void movePWMBLeft();
 	void movePWMBRight();
+	
+	/***************************************************************************************************/
 
 	void PWMturnLeft();
 	void PWMturnRight();
+	
+	/***************************************************************************************************/
 
 private:
 
 	int vala;
 	int valb;
 	int val;
+	int hb_num;
 
     // enable pins
     byte mE1;
@@ -106,7 +153,7 @@ private:
 /****************************************************************************************************
 *****************************************************************************************************
 *****************************************************************************************************
-											Version v1.02										
+											Version v1.07									
 *****************************************************************************************************
 *****************************************************************************************************
 *****************************************************************************************************/
