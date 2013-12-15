@@ -30,4 +30,5 @@ Public Class Form1
         SerialPort1.Write("0")
         SerialPort1.Close()
     End Sub
+
 End Class

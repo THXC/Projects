@@ -39,6 +39,20 @@ Public Class frmMain
 
         btnDisconnect.Enabled = False           'Initially Disconnect Button is Disabled 
 
+        btnON.Enabled = False
+        btnOFF.Enabled = False
+        btnT.Enabled = False
+
+        btnPWM125.Enabled = False
+        btnPWM25.Enabled = False
+        btnPWM375.Enabled = False
+        btnPWM50.Enabled = False
+        btnPWM625.Enabled = False
+        btnPWM75.Enabled = False
+        btnPWM875.Enabled = False
+        btnPWM100.Enabled = False
+        btnPWMOFF.Enabled = False
+
     End Sub
 
     Private Sub btnConnect_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConnect.Click
@@ -54,6 +68,20 @@ Public Class frmMain
         btnConnect.Enabled = False          'Disable Connect button 
         btnDisconnect.Enabled = True        'and Enable Disconnect button 
 
+        btnON.Enabled = True
+        btnOFF.Enabled = True
+        btnT.Enabled = True
+
+        btnPWM125.Enabled = True
+        btnPWM25.Enabled = True
+        btnPWM375.Enabled = True
+        btnPWM50.Enabled = True
+        btnPWM625.Enabled = True
+        btnPWM75.Enabled = True
+        btnPWM875.Enabled = True
+        btnPWM100.Enabled = True
+        btnPWMOFF.Enabled = True
+
     End Sub
 
     Private Sub btnDisconnect_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDisconnect.Click
@@ -61,13 +89,22 @@ Public Class frmMain
 
         btnConnect.Enabled = True
         btnDisconnect.Enabled = False
-    End Sub
 
-    Private Sub btnSend_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSend.Click
-        SerialPort1.Write(txtTransmit.Text & vbCr) 'The text contained in the txtText will be sent to the serial port as ascii 
-        'plus the carriage return (Enter Key) the carriage return can be ommitted if the other end does not need it 
-    End Sub
+        btnON.Enabled = False
+        btnOFF.Enabled = False
+        btnT.Enabled = False
 
+        btnPWM125.Enabled = False
+        btnPWM25.Enabled = False
+        btnPWM375.Enabled = False
+        btnPWM50.Enabled = False
+        btnPWM625.Enabled = False
+        btnPWM75.Enabled = False
+        btnPWM875.Enabled = False
+        btnPWM100.Enabled = False
+        btnPWMOFF.Enabled = False
+
+    End Sub
     Private Sub SerialPort1_DataReceived(ByVal sender As Object, ByVal e As System.IO.Ports.SerialDataReceivedEventArgs) Handles SerialPort1.DataReceived
         ReceivedText(SerialPort1.ReadExisting())    'Automatically called every time a data is received at the serialPort 
     End Sub
@@ -95,5 +132,59 @@ Public Class frmMain
         Else                                                                                'without disconnecting first. 
             MsgBox("Valid only if port is Closed", vbCritical)
         End If
+    End Sub
+
+    Private Sub btnON_Click(sender As System.Object, e As System.EventArgs) Handles btnON.Click
+        SerialPort1.Write("40ON")
+    End Sub
+
+    Private Sub btnOFF_Click(sender As System.Object, e As System.EventArgs) Handles btnOFF.Click
+        SerialPort1.Write("40OFF")
+    End Sub
+
+    Private Sub btnT_Click(sender As System.Object, e As System.EventArgs) Handles btnT.Click
+        SerialPort1.Write("40T")
+    End Sub
+
+
+
+
+    '-------------------------------------------------------------------------------------------------'
+    'PWM'
+    '-------------------------------------------------------------------------------------------------'
+    Private Sub btnPWM125_Click(sender As System.Object, e As System.EventArgs) Handles btnPWM125.Click
+        SerialPort1.Write("125PWM")
+    End Sub
+
+    Private Sub btnPWM25_Click(sender As System.Object, e As System.EventArgs) Handles btnPWM25.Click
+        SerialPort1.Write("25PWM")
+    End Sub
+
+    Private Sub btnPWM375_Click(sender As System.Object, e As System.EventArgs) Handles btnPWM375.Click
+        SerialPort1.Write("375PWM")
+    End Sub
+
+    Private Sub btnPWM50_Click(sender As System.Object, e As System.EventArgs) Handles btnPWM50.Click
+        SerialPort1.Write("50PWM")
+    End Sub
+
+    Private Sub btnPWM625_Click(sender As System.Object, e As System.EventArgs) Handles btnPWM625.Click
+        SerialPort1.Write("625PWM")
+    End Sub
+
+    Private Sub btnPWM75_Click(sender As System.Object, e As System.EventArgs) Handles btnPWM75.Click
+        SerialPort1.Write("75PWM")
+    End Sub
+
+    Private Sub btnPWM875_Click(sender As System.Object, e As System.EventArgs) Handles btnPWM875.Click
+        SerialPort1.Write("875PWM")
+    End Sub
+
+    Private Sub btnPWM100_Click(sender As System.Object, e As System.EventArgs) Handles btnPWM100.Click
+        SerialPort1.Write("100PWM")
+    End Sub
+
+    Private Sub btnPWMOFF_Click(sender As System.Object, e As System.EventArgs) Handles btnPWMOFF.Click
+        SerialPort1.Write("PWMOFF")
     End Sub
 End Class
