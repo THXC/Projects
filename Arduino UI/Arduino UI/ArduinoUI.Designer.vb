@@ -31,22 +31,30 @@ Partial Class frmMain
         Me.btnConnect = New System.Windows.Forms.Button()
         Me.btnDisconnect = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.TrackBar2 = New System.Windows.Forms.TrackBar()
+        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
+        Me.btnPWMOFF = New System.Windows.Forms.Button()
+        Me.btnPWM875 = New System.Windows.Forms.Button()
+        Me.btnPWM625 = New System.Windows.Forms.Button()
+        Me.btnPWM375 = New System.Windows.Forms.Button()
+        Me.btnPWM125 = New System.Windows.Forms.Button()
+        Me.btnPWM100 = New System.Windows.Forms.Button()
+        Me.btnPWM75 = New System.Windows.Forms.Button()
+        Me.btnPWM50 = New System.Windows.Forms.Button()
+        Me.btnPWM25 = New System.Windows.Forms.Button()
         Me.btnT = New System.Windows.Forms.Button()
         Me.btnOFF = New System.Windows.Forms.Button()
         Me.btnON = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.rtbReceived = New System.Windows.Forms.RichTextBox()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
-        Me.btnPWM25 = New System.Windows.Forms.Button()
-        Me.btnPWM50 = New System.Windows.Forms.Button()
-        Me.btnPWM75 = New System.Windows.Forms.Button()
-        Me.btnPWM100 = New System.Windows.Forms.Button()
-        Me.btnPWM125 = New System.Windows.Forms.Button()
-        Me.btnPWM375 = New System.Windows.Forms.Button()
-        Me.btnPWM625 = New System.Windows.Forms.Button()
-        Me.btnPWM875 = New System.Windows.Forms.Button()
-        Me.btnPWMOFF = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -106,6 +114,12 @@ Partial Class frmMain
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.ProgressBar2)
+        Me.GroupBox1.Controls.Add(Me.ProgressBar1)
+        Me.GroupBox1.Controls.Add(Me.TrackBar2)
+        Me.GroupBox1.Controls.Add(Me.TrackBar1)
         Me.GroupBox1.Controls.Add(Me.btnPWMOFF)
         Me.GroupBox1.Controls.Add(Me.btnPWM875)
         Me.GroupBox1.Controls.Add(Me.btnPWM625)
@@ -124,6 +138,137 @@ Partial Class frmMain
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Transmit Data"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 195)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(44, 13)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "Servo 2"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 121)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(44, 13)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "Servo 1"
+        '
+        'ProgressBar2
+        '
+        Me.ProgressBar2.Location = New System.Drawing.Point(15, 251)
+        Me.ProgressBar2.Name = "ProgressBar2"
+        Me.ProgressBar2.Size = New System.Drawing.Size(535, 15)
+        Me.ProgressBar2.TabIndex = 15
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(15, 177)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(535, 15)
+        Me.ProgressBar1.TabIndex = 14
+        '
+        'TrackBar2
+        '
+        Me.TrackBar2.Location = New System.Drawing.Point(7, 211)
+        Me.TrackBar2.Maximum = 9
+        Me.TrackBar2.Name = "TrackBar2"
+        Me.TrackBar2.Size = New System.Drawing.Size(555, 45)
+        Me.TrackBar2.TabIndex = 13
+        '
+        'TrackBar1
+        '
+        Me.TrackBar1.Location = New System.Drawing.Point(7, 137)
+        Me.TrackBar1.Maximum = 17
+        Me.TrackBar1.Minimum = 1
+        Me.TrackBar1.Name = "TrackBar1"
+        Me.TrackBar1.Size = New System.Drawing.Size(555, 45)
+        Me.TrackBar1.TabIndex = 12
+        Me.TrackBar1.Value = 9
+        '
+        'btnPWMOFF
+        '
+        Me.btnPWMOFF.Location = New System.Drawing.Point(444, 50)
+        Me.btnPWMOFF.Name = "btnPWMOFF"
+        Me.btnPWMOFF.Size = New System.Drawing.Size(100, 57)
+        Me.btnPWMOFF.TabIndex = 11
+        Me.btnPWMOFF.Text = "PWM OFF"
+        Me.btnPWMOFF.UseVisualStyleBackColor = True
+        '
+        'btnPWM875
+        '
+        Me.btnPWM875.Location = New System.Drawing.Point(340, 81)
+        Me.btnPWM875.Name = "btnPWM875"
+        Me.btnPWM875.Size = New System.Drawing.Size(80, 25)
+        Me.btnPWM875.TabIndex = 10
+        Me.btnPWM875.Text = "PWM 87,5%"
+        Me.btnPWM875.UseVisualStyleBackColor = True
+        '
+        'btnPWM625
+        '
+        Me.btnPWM625.Location = New System.Drawing.Point(232, 81)
+        Me.btnPWM625.Name = "btnPWM625"
+        Me.btnPWM625.Size = New System.Drawing.Size(80, 25)
+        Me.btnPWM625.TabIndex = 9
+        Me.btnPWM625.Text = "PWM 62,5%"
+        Me.btnPWM625.UseVisualStyleBackColor = True
+        '
+        'btnPWM375
+        '
+        Me.btnPWM375.Location = New System.Drawing.Point(120, 81)
+        Me.btnPWM375.Name = "btnPWM375"
+        Me.btnPWM375.Size = New System.Drawing.Size(80, 25)
+        Me.btnPWM375.TabIndex = 8
+        Me.btnPWM375.Text = "PWM 37,5%"
+        Me.btnPWM375.UseVisualStyleBackColor = True
+        '
+        'btnPWM125
+        '
+        Me.btnPWM125.Location = New System.Drawing.Point(7, 81)
+        Me.btnPWM125.Name = "btnPWM125"
+        Me.btnPWM125.Size = New System.Drawing.Size(80, 25)
+        Me.btnPWM125.TabIndex = 7
+        Me.btnPWM125.Text = "PWM 12,5%"
+        Me.btnPWM125.UseVisualStyleBackColor = True
+        '
+        'btnPWM100
+        '
+        Me.btnPWM100.Location = New System.Drawing.Point(340, 50)
+        Me.btnPWM100.Name = "btnPWM100"
+        Me.btnPWM100.Size = New System.Drawing.Size(80, 25)
+        Me.btnPWM100.TabIndex = 6
+        Me.btnPWM100.Text = "PWM 100%"
+        Me.btnPWM100.UseVisualStyleBackColor = True
+        '
+        'btnPWM75
+        '
+        Me.btnPWM75.Location = New System.Drawing.Point(232, 50)
+        Me.btnPWM75.Name = "btnPWM75"
+        Me.btnPWM75.Size = New System.Drawing.Size(80, 25)
+        Me.btnPWM75.TabIndex = 5
+        Me.btnPWM75.Text = "PWM 75%"
+        Me.btnPWM75.UseVisualStyleBackColor = True
+        '
+        'btnPWM50
+        '
+        Me.btnPWM50.Location = New System.Drawing.Point(120, 50)
+        Me.btnPWM50.Name = "btnPWM50"
+        Me.btnPWM50.Size = New System.Drawing.Size(80, 25)
+        Me.btnPWM50.TabIndex = 4
+        Me.btnPWM50.Text = "PWM 50%"
+        Me.btnPWM50.UseVisualStyleBackColor = True
+        '
+        'btnPWM25
+        '
+        Me.btnPWM25.Location = New System.Drawing.Point(7, 50)
+        Me.btnPWM25.Name = "btnPWM25"
+        Me.btnPWM25.Size = New System.Drawing.Size(80, 25)
+        Me.btnPWM25.TabIndex = 3
+        Me.btnPWM25.Text = "PWM 25%"
+        Me.btnPWM25.UseVisualStyleBackColor = True
         '
         'btnT
         '
@@ -174,87 +319,6 @@ Partial Class frmMain
         'SerialPort1
         '
         '
-        'btnPWM25
-        '
-        Me.btnPWM25.Location = New System.Drawing.Point(7, 50)
-        Me.btnPWM25.Name = "btnPWM25"
-        Me.btnPWM25.Size = New System.Drawing.Size(80, 25)
-        Me.btnPWM25.TabIndex = 3
-        Me.btnPWM25.Text = "PWM 25%"
-        Me.btnPWM25.UseVisualStyleBackColor = True
-        '
-        'btnPWM50
-        '
-        Me.btnPWM50.Location = New System.Drawing.Point(120, 50)
-        Me.btnPWM50.Name = "btnPWM50"
-        Me.btnPWM50.Size = New System.Drawing.Size(80, 25)
-        Me.btnPWM50.TabIndex = 4
-        Me.btnPWM50.Text = "PWM 50%"
-        Me.btnPWM50.UseVisualStyleBackColor = True
-        '
-        'btnPWM75
-        '
-        Me.btnPWM75.Location = New System.Drawing.Point(232, 50)
-        Me.btnPWM75.Name = "btnPWM75"
-        Me.btnPWM75.Size = New System.Drawing.Size(80, 25)
-        Me.btnPWM75.TabIndex = 5
-        Me.btnPWM75.Text = "PWM 75%"
-        Me.btnPWM75.UseVisualStyleBackColor = True
-        '
-        'btnPWM100
-        '
-        Me.btnPWM100.Location = New System.Drawing.Point(340, 50)
-        Me.btnPWM100.Name = "btnPWM100"
-        Me.btnPWM100.Size = New System.Drawing.Size(80, 25)
-        Me.btnPWM100.TabIndex = 6
-        Me.btnPWM100.Text = "PWM 100%"
-        Me.btnPWM100.UseVisualStyleBackColor = True
-        '
-        'btnPWM125
-        '
-        Me.btnPWM125.Location = New System.Drawing.Point(7, 81)
-        Me.btnPWM125.Name = "btnPWM125"
-        Me.btnPWM125.Size = New System.Drawing.Size(80, 25)
-        Me.btnPWM125.TabIndex = 7
-        Me.btnPWM125.Text = "PWM 12,5%"
-        Me.btnPWM125.UseVisualStyleBackColor = True
-        '
-        'btnPWM375
-        '
-        Me.btnPWM375.Location = New System.Drawing.Point(120, 81)
-        Me.btnPWM375.Name = "btnPWM375"
-        Me.btnPWM375.Size = New System.Drawing.Size(80, 25)
-        Me.btnPWM375.TabIndex = 8
-        Me.btnPWM375.Text = "PWM 37,5%"
-        Me.btnPWM375.UseVisualStyleBackColor = True
-        '
-        'btnPWM625
-        '
-        Me.btnPWM625.Location = New System.Drawing.Point(232, 81)
-        Me.btnPWM625.Name = "btnPWM625"
-        Me.btnPWM625.Size = New System.Drawing.Size(80, 25)
-        Me.btnPWM625.TabIndex = 9
-        Me.btnPWM625.Text = "PWM 62,5%"
-        Me.btnPWM625.UseVisualStyleBackColor = True
-        '
-        'btnPWM875
-        '
-        Me.btnPWM875.Location = New System.Drawing.Point(340, 81)
-        Me.btnPWM875.Name = "btnPWM875"
-        Me.btnPWM875.Size = New System.Drawing.Size(80, 25)
-        Me.btnPWM875.TabIndex = 10
-        Me.btnPWM875.Text = "PWM 87,5%"
-        Me.btnPWM875.UseVisualStyleBackColor = True
-        '
-        'btnPWMOFF
-        '
-        Me.btnPWMOFF.Location = New System.Drawing.Point(444, 50)
-        Me.btnPWMOFF.Name = "btnPWMOFF"
-        Me.btnPWMOFF.Size = New System.Drawing.Size(100, 57)
-        Me.btnPWMOFF.TabIndex = 11
-        Me.btnPWMOFF.Text = "PWMOFF"
-        Me.btnPWMOFF.UseVisualStyleBackColor = True
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -273,6 +337,9 @@ Partial Class frmMain
         Me.Name = "frmMain"
         Me.Text = "Arduino UFI"
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -300,5 +367,11 @@ Partial Class frmMain
     Friend WithEvents btnPWM100 As System.Windows.Forms.Button
     Friend WithEvents btnPWM75 As System.Windows.Forms.Button
     Friend WithEvents btnPWMOFF As System.Windows.Forms.Button
+    Friend WithEvents ProgressBar2 As System.Windows.Forms.ProgressBar
+    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
+    Friend WithEvents TrackBar2 As System.Windows.Forms.TrackBar
+    Friend WithEvents TrackBar1 As System.Windows.Forms.TrackBar
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 
 End Class

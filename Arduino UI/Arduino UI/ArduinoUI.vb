@@ -25,10 +25,10 @@ Public Class frmMain
     Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'When our form loads, auto detect all serial ports in the system and populate the cmbPort Combo box. 
         myPort = IO.Ports.SerialPort.GetPortNames() 'Get all com ports available 
-        cmbBaud.Items.Add(9600)     'Populate the cmbBaud Combo box to common baud rates used 
-        cmbBaud.Items.Add(19200)
-        cmbBaud.Items.Add(38400)
-        cmbBaud.Items.Add(57600)
+        'cmbBaud.Items.Add(9600)     'Populate the cmbBaud Combo box to common baud rates used 
+        'cmbBaud.Items.Add(19200)
+        'cmbBaud.Items.Add(38400)
+        'cmbBaud.Items.Add(57600)
         cmbBaud.Items.Add(115200)
 
         For i = 0 To UBound(myPort)
@@ -186,5 +186,25 @@ Public Class frmMain
 
     Private Sub btnPWMOFF_Click(sender As System.Object, e As System.EventArgs) Handles btnPWMOFF.Click
         SerialPort1.Write("PWMOFF")
+    End Sub
+
+    Private Sub TrackBar1_Scroll(sender As System.Object, e As System.EventArgs) Handles TrackBar1.Scroll
+        SerialPort1.Write("<")
+        SerialPort1.Write(TrackBar1.Value.ToString)
+        SerialPort1.Write(">")
+    End Sub
+
+    Private Sub ProgressBar1_Click(sender As System.Object, e As System.EventArgs) Handles ProgressBar1.Click
+
+    End Sub
+
+    Private Sub TrackBar2_Scroll(sender As System.Object, e As System.EventArgs) Handles TrackBar2.Scroll
+        SerialPort1.Write("<")
+        SerialPort1.Write(TrackBar2.Value.ToString)
+        SerialPort1.Write(">")
+    End Sub
+
+    Private Sub ProgressBar2_Click(sender As System.Object, e As System.EventArgs) Handles ProgressBar2.Click
+
     End Sub
 End Class
