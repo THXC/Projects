@@ -31,6 +31,9 @@ Partial Class frmMain
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.AxWinsock1 = New AxMSWinsockLib.AxWinsock()
+        Me.btnON = New System.Windows.Forms.Button()
+        Me.btnOFF = New System.Windows.Forms.Button()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.AxWinsock1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -109,11 +112,40 @@ Partial Class frmMain
         Me.AxWinsock1.Size = New System.Drawing.Size(28, 28)
         Me.AxWinsock1.TabIndex = 1
         '
+        'btnON
+        '
+        Me.btnON.Location = New System.Drawing.Point(12, 99)
+        Me.btnON.Name = "btnON"
+        Me.btnON.Size = New System.Drawing.Size(360, 77)
+        Me.btnON.TabIndex = 2
+        Me.btnON.Text = "ON"
+        Me.btnON.UseVisualStyleBackColor = True
+        '
+        'btnOFF
+        '
+        Me.btnOFF.Location = New System.Drawing.Point(12, 183)
+        Me.btnOFF.Name = "btnOFF"
+        Me.btnOFF.Size = New System.Drawing.Size(360, 77)
+        Me.btnOFF.TabIndex = 3
+        Me.btnOFF.Text = "OFF"
+        Me.btnOFF.UseVisualStyleBackColor = True
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(379, 13)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(741, 247)
+        Me.RichTextBox1.TabIndex = 4
+        Me.RichTextBox1.Text = ""
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1166, 463)
+        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.btnOFF)
+        Me.Controls.Add(Me.btnON)
         Me.Controls.Add(Me.AxWinsock1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -133,5 +165,8 @@ Partial Class frmMain
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents AxWinsock1 As AxMSWinsockLib.AxWinsock
+    Friend WithEvents btnON As System.Windows.Forms.Button
+    Friend WithEvents btnOFF As System.Windows.Forms.Button
+    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
 
 End Class
