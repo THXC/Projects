@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Client", "Client\Client.vbproj", "{F712E650-9188-4D6C-82FA-D9428F66EBDA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Server", "Server\Server.vbproj", "{40B1A9AB-F110-4FD9-800E-A4850986E597}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F712E650-9188-4D6C-82FA-D9428F66EBDA}.Debug|x86.ActiveCfg = Debug|x86
+		{F712E650-9188-4D6C-82FA-D9428F66EBDA}.Debug|x86.Build.0 = Debug|x86
+		{F712E650-9188-4D6C-82FA-D9428F66EBDA}.Release|x86.ActiveCfg = Release|x86
+		{F712E650-9188-4D6C-82FA-D9428F66EBDA}.Release|x86.Build.0 = Release|x86
+		{40B1A9AB-F110-4FD9-800E-A4850986E597}.Debug|x86.ActiveCfg = Debug|x86
+		{40B1A9AB-F110-4FD9-800E-A4850986E597}.Debug|x86.Build.0 = Debug|x86
+		{40B1A9AB-F110-4FD9-800E-A4850986E597}.Release|x86.ActiveCfg = Release|x86
+		{40B1A9AB-F110-4FD9-800E-A4850986E597}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

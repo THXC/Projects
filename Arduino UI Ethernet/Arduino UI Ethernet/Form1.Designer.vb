@@ -26,24 +26,22 @@ Partial Class frmMain
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnDisconnected = New System.Windows.Forms.Button()
         Me.btnConnected = New System.Windows.Forms.Button()
-        Me.tbPort = New System.Windows.Forms.TextBox()
-        Me.tbHost = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.AxWinsock1 = New AxMSWinsockLib.AxWinsock()
         Me.btnON = New System.Windows.Forms.Button()
         Me.btnOFF = New System.Windows.Forms.Button()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.lbData = New System.Windows.Forms.ListBox()
+        Me.cmbHost = New System.Windows.Forms.ComboBox()
+        Me.cmbPort = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.AxWinsock1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cmbPort)
+        Me.GroupBox1.Controls.Add(Me.cmbHost)
         Me.GroupBox1.Controls.Add(Me.btnDisconnected)
         Me.GroupBox1.Controls.Add(Me.btnConnected)
-        Me.GroupBox1.Controls.Add(Me.tbPort)
-        Me.GroupBox1.Controls.Add(Me.tbHost)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
@@ -71,20 +69,6 @@ Partial Class frmMain
         Me.btnConnected.Text = "Connected"
         Me.btnConnected.UseVisualStyleBackColor = True
         '
-        'tbPort
-        '
-        Me.tbPort.Location = New System.Drawing.Point(41, 45)
-        Me.tbPort.Name = "tbPort"
-        Me.tbPort.Size = New System.Drawing.Size(160, 20)
-        Me.tbPort.TabIndex = 3
-        '
-        'tbHost
-        '
-        Me.tbHost.Location = New System.Drawing.Point(41, 16)
-        Me.tbHost.Name = "tbHost"
-        Me.tbHost.Size = New System.Drawing.Size(160, 20)
-        Me.tbHost.TabIndex = 2
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -102,15 +86,6 @@ Partial Class frmMain
         Me.Label1.Size = New System.Drawing.Size(29, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Host"
-        '
-        'AxWinsock1
-        '
-        Me.AxWinsock1.Enabled = True
-        Me.AxWinsock1.Location = New System.Drawing.Point(1126, 12)
-        Me.AxWinsock1.Name = "AxWinsock1"
-        Me.AxWinsock1.OcxState = CType(resources.GetObject("AxWinsock1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWinsock1.Size = New System.Drawing.Size(28, 28)
-        Me.AxWinsock1.TabIndex = 1
         '
         'btnON
         '
@@ -130,43 +105,57 @@ Partial Class frmMain
         Me.btnOFF.Text = "OFF"
         Me.btnOFF.UseVisualStyleBackColor = True
         '
-        'RichTextBox1
+        'lbData
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(379, 13)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(741, 247)
-        Me.RichTextBox1.TabIndex = 4
-        Me.RichTextBox1.Text = ""
+        Me.lbData.BackColor = System.Drawing.SystemColors.Info
+        Me.lbData.FormattingEnabled = True
+        Me.lbData.Location = New System.Drawing.Point(378, 12)
+        Me.lbData.Name = "lbData"
+        Me.lbData.Size = New System.Drawing.Size(776, 251)
+        Me.lbData.TabIndex = 6
+        '
+        'cmbHost
+        '
+        Me.cmbHost.FormattingEnabled = True
+        Me.cmbHost.Location = New System.Drawing.Point(39, 13)
+        Me.cmbHost.Name = "cmbHost"
+        Me.cmbHost.Size = New System.Drawing.Size(162, 21)
+        Me.cmbHost.TabIndex = 6
+        '
+        'cmbPort
+        '
+        Me.cmbPort.FormattingEnabled = True
+        Me.cmbPort.Location = New System.Drawing.Point(39, 44)
+        Me.cmbPort.Name = "cmbPort"
+        Me.cmbPort.Size = New System.Drawing.Size(162, 21)
+        Me.cmbPort.TabIndex = 7
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1166, 463)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.lbData)
         Me.Controls.Add(Me.btnOFF)
         Me.Controls.Add(Me.btnON)
-        Me.Controls.Add(Me.AxWinsock1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
         Me.Text = "Arduino UFI Ethernet"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.AxWinsock1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents btnDisconnected As System.Windows.Forms.Button
     Friend WithEvents btnConnected As System.Windows.Forms.Button
-    Friend WithEvents tbPort As System.Windows.Forms.TextBox
-    Friend WithEvents tbHost As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents AxWinsock1 As AxMSWinsockLib.AxWinsock
     Friend WithEvents btnON As System.Windows.Forms.Button
     Friend WithEvents btnOFF As System.Windows.Forms.Button
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents lbData As System.Windows.Forms.ListBox
+    Friend WithEvents cmbPort As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbHost As System.Windows.Forms.ComboBox
 
 End Class
