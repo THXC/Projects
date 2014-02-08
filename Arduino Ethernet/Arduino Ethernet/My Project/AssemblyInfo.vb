@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Arduino UI Ethernet")> 
+<Assembly: AssemblyTitle("Arduino Ethernet")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("Arduino UI Ethernet")> 
+<Assembly: AssemblyProduct("Arduino Ethernet")> 
 <Assembly: AssemblyCopyright("Copyright ©  2014")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("c3acb8af-5956-4cf2-b07c-051ba8635632")> 
+<Assembly: Guid("a8411658-1732-4b0b-ae8c-322fa2e1eb38")> 
 
 ' Version information for an assembly consists of the following four values:
 '

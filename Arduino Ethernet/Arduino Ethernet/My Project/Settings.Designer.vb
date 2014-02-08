@@ -64,9 +64,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.Arduino_UI_Ethernet.My.MySettings
+        Friend ReadOnly Property Settings() As Global.Arduino_Ethernet.My.MySettings
             Get
-                Return Global.Arduino_UI_Ethernet.My.MySettings.Default
+                Return Global.Arduino_Ethernet.My.MySettings.Default
             End Get
         End Property
     End Module

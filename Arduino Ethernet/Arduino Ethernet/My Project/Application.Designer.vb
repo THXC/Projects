@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Arduino_UI_Ethernet.Form1
+            Me.MainForm = Global.Arduino_Ethernet.Form1
         End Sub
     End Class
 End Namespace
