@@ -58,7 +58,7 @@ void WyswietlWynik( const Wynik wynik )
 	if( wynik.prawda )
 	{
 		cout << "\n Udalo ci sie odgadnac liczbe gesi! "
-			 << "\n Ustaliles wynik dzieki mojemu wzorowi? "
+			 /*<< "\n Ustaliles wynik dzieki mojemu wzorowi? "*/
 			 << "\n (( x + x ) + ( x / 2 ) + ( x / 4 ) + 1) "
 			 << "\n ((36 + 36) + ( 36 / 2) + ( 36 / 4) + 1) = "
 			 << wynik.Wynik_1
