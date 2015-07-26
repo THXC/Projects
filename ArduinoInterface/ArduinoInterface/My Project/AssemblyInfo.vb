@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Arduino UI")> 
+<Assembly: AssemblyTitle("ArduinoInterface")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("Arduino UI")> 
-<Assembly: AssemblyCopyright("Copyright ©  2013")> 
+<Assembly: AssemblyProduct("ArduinoInterface")> 
+<Assembly: AssemblyCopyright("Copyright ©  2015")> 
 <Assembly: AssemblyTrademark("")> 
 
-<Assembly: ComVisible(False)>
+<Assembly: ComVisible(False)> 
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("28787d3b-c6fa-4cef-8142-cb87645a32ab")> 
+<Assembly: Guid("5196b8ed-37fe-43a7-b3c5-da99ff068cc0")> 
 
 ' Version information for an assembly consists of the following four values:
 '
